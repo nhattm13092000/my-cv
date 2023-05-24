@@ -738,3 +738,50 @@ ul.profile-information li p span{
 .activeLink{
     color: #ffc500;
 }
+
+@media (max-width: 900px) {
+    .profile-des{
+        flex-direction: column;
+    }
+
+    .left-content{
+        width: 100%;
+    }
+
+    .right-content{
+        width: 100%;
+        margin: 20px 0 0 0;
+    }
+
+    .header{
+        height: 50px;
+    }
+
+    .link{
+        display: none;
+    }
+
+    .send{
+        height: 30px;
+        width: 100px;
+        margin-right: 12px;
+    }
+
+    .serviceContent{
+        flex-direction: column;
+    }
+
+    .service{
+        margin:  12px 0;
+    }
+
+    .skill{
+        flex-direction: column;
+    }
+
+    .designSkill, .codeSkill{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+}
