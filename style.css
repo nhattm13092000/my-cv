@@ -1,9 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background: url(./img/bg.png);
 }
 
 .container{
@@ -21,7 +24,7 @@
 .left-content{
     border-radius: 4px;
     background: #fff;
-    box-shadow: 0px 2px 92px 0px rgba(0, 0, 0, 0.07);
+    -webkit-box-shadow: 0px 2px 92px 0px rgba(0, 0, 0, 0.07);
     width: 20%;
     height: 80vh;
 }
@@ -37,7 +40,14 @@
 
 .name{
     text-transform: uppercase;
-    font-size: 20px;
+    font-size: 17px;
+    color: #333333;
+    font-weight: bold;
+}
+
+.job{
+    font-size: 13px;
+    color: #777777;
 }
 
 .profile-img > img{
@@ -61,8 +71,8 @@ ul.profile-information li{
 ul.profile-information li:before{
     content: '';
     border: solid 2px;
-    width: 8px;
-    height: 8px;
+    width: 4px;
+    height: 4px;
     border-radius: 50px;
     font-size: 8px;
     margin: 2px 0 0 -25px;
@@ -109,9 +119,14 @@ ul.profile-information li:first-child:before{
     box-shadow: 0px 2px 32px 0px rgba(4, 123, 248, 0.3);
 }
 
+ul.profile-information li:last-child{
+    border: 0;
+    margin-left: 2px;
+    margin-top: -2px;
+}
+
 
 ul.profile-information li p span{
-    font-weight: 600;
     color: #000;
 }
 
@@ -184,6 +199,9 @@ ul.profile-information li p span{
     transition: 0.5s;
     font-size: 21px;
     border-radius: 8px 0 0 8px;
+    padding: 0 24px;
+    font-size: 14px;
+    font-weight: bold;
 }
 
 .home:hover{
@@ -210,20 +228,42 @@ ul.profile-information li p span{
     text-decoration: none;
     transition: 0.5s;
     color: #000;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: bold;
 }
+
 
 .link li a:hover{
     color: #ffc500;
 }
 
-.link li a:hover i{
+.header-right{
+    display: flex;
+    justify-content: center;
+}
+
+.fa-brands{
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    margin-right: 12px;
+    color: #000;
+    transition: all ease-in-out 0.5s;
+}
+
+.fa-brands:hover{
     color: #000;
     scale: 1.5;
 }
 
-.header-right{
+
+.linkPersonal{
     display: flex;
-    justify-content: center;
+    list-style: none;
+    align-items: center;
+    font-size: 12px;
 }
 
 .hireMe{
@@ -241,9 +281,13 @@ ul.profile-information li p span{
     border-radius: 20px;
     background-color: #ffc500;
     transition: 0.5s;
-    font-size: 15px;
+    font-size: 14px;
+    font-weight: bold;
     margin-right: 20px;
     transition: 0.5s;
+    padding: 1px 6px 1px 19px;
+    line-height: 35px;
+    
 }
 
 .send:hover{
@@ -253,12 +297,14 @@ ul.profile-information li p span{
 .send i{
     background-color: #fff;
     border-radius: 50px;
-    height: 20px;
-    width: 20px;
+    height: 27px;
+    width: 27px;
     text-align: center;
     line-height: 21px;
-    font-size: 12px;
-    margin-left: 8px;
+    font-size: 11px;
+    margin-left: 15px;
+    text-align: center;
+    line-height: 29px;
 }
 
 .body{
@@ -270,52 +316,67 @@ ul.profile-information li p span{
     border-radius: 8px 8px 0 0;
     padding: 30px;
     background-color: #fff;
-    line-height: 29px;
 }
 
-.about-me h1{
-    text-decoration: underline;
-    text-decoration-color: #ffc500;
-    text-decoration-thickness: 4px;
-    margin-bottom: 20px;
+.section-title{
+    position: relative;
+    display: inline-block;
+}
+
+.section-title h2{
+    font-size: 18px;
+    font-weight: 600;
+    position: relative;
+}
+
+.section-title span{
+    background-color: #ffb100 !important;
+    position: absolute;
+    height: 7px;
+    width: 100%;
+    opacity: 0.4;
+    bottom: 0;
+    left: 0;
 }
 
 .about-me p{
     font-size: 13px;
+    margin-top: 30px;
+    color: #4c4c4c;
+    line-height: 29px;
 }
 
 .myServices{
     padding: 30px;
     line-height: 20px;
-}
-
-.myServices h1{
-    text-decoration: underline;
-    text-decoration-color: #ffc500;
-    text-decoration-thickness: 4px;
-    margin-bottom: 20px;
+    background: #fafafa;
 }
 
 .serviceContent{
     display: flex;
     justify-content: space-between;
+    margin-top: 20px;
 }
 
 .service{
-    margin: 12px 20px;
+    background: #fff;
+    width: 20%;
+    margin: 12px 0;
     padding: 20px;
     box-shadow: 0px 2px 92px 0px rgba(0, 0, 0, 0.07);
+    border-radius: 8px;
 }
 
 .service .icon{
-    font-size: 32px;
+    font-size: 44px;
     margin-bottom: 20px;
 }
 
 .service .title{
     font-size: 14px;
     color: #333333;
-    font-weight: 600;
+    font-weight: 500;
+    line-height: 30px;
 }
 
 .service .text{
@@ -327,7 +388,6 @@ ul.profile-information li p span{
     border-radius: 0 0 8px 8px;
     padding: 30px;
     background-color: #fff;
-    line-height: 40px;
     display: flex;
     justify-content: space-between;
 }
@@ -336,34 +396,25 @@ ul.profile-information li p span{
     width: 45%;
 }
 
-.designSkill h2{
-    text-decoration: underline;
-    text-decoration-color: #ffc500;
-    text-decoration-thickness: 4px;
-    margin-bottom: 20px;
-}
-
-.codeSkill h2{
-    text-decoration: underline;
-    text-decoration-color: #ffc500;
-    text-decoration-thickness: 4px;
-    margin-bottom: 20px;
-}
-
-
 .codeSkill{
     width: 45%;
+}
+
+.skillbar{
+    margin-top: 20px;
+    font-size: 12px;
 }
 
 .level{
     width: 100%;
     background-color: #dfdfdf;
     border-radius: 20px;
+    margin-bottom: 10px;
 }
 .bar{
     text-align: right;
-    padding-top: 2px;
-    padding-bottom: 2px;
+    padding-top: 3px;
+    padding-bottom: 3px;
     color: #eee;
 }
 
@@ -397,17 +448,16 @@ ul.profile-information li p span{
     background-color: #ffb100;
 }
 
+
+/* resume Content */
+
 .resumeContent{
     display: none;
+    background: #fff;
 }
 
 .education{
     padding: 40px;
-}
-.education > h2{
-    text-decoration: underline;
-    text-decoration-color: #ffc500;
-    text-decoration-thickness: 4px;
 }
 
 .showEdu{
@@ -415,6 +465,7 @@ ul.profile-information li p span{
     justify-content: space-between;
     padding: 40px;
 }
+
 
 .eduHistory{
     width: 45%;
@@ -426,18 +477,16 @@ ul.profile-information li p span{
 
 .timeline li{
     list-style: none;
-    border-left: solid 2px #787878;
+    border-left: solid 2px #cecece;
     padding: 0 0 40px 30px;
 }
 
 .timeline li:before{
     content: "";
     border: solid 2px;
-    width: 8px;
-    height: 8px;
-    border: solid 1px #ffb100;
-    border-radius: 50px;
-    border-radius: 50px;
+    width: 4px;
+    height: 4px;
+    border: solid 2px #ffb100;
     border-radius: 50px;
     font-size: 8px;
     margin-left: -35px;
@@ -445,21 +494,19 @@ ul.profile-information li p span{
     background: #fff;
     display: block;
     position: absolute;
-    margin-top: 8px;
+    margin-top: -1px;
 }
-
-.timeline li .line-title{
-    font-size: 16px;
-    line-height: 10px;
-    padding: 0 0 60px 19px;
-}
-
 
 .timeline li:first-child:before{
     border: 0;
     background: none;
     position: relative;
     display: flex;
+}
+
+.timeline li:last-child{
+    border: 0;
+    margin-left: 2px;
 }
 
 .timeline li:first-child i{
@@ -471,35 +518,55 @@ ul.profile-information li p span{
     align-items: center;
     border-radius: 50px;
     margin: -13px -48px;;
+    padding: 18px 16px;
 }
 
 .timeline li:first-child h2{
-    margin: -32px 0 20px 32px;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 30px;
+    margin: -32px 0 20px 20px;
 }
 
 .timeline li{
     line-height: 32px;
 }
 
-.clients{
-    padding: 40px;
+.achive{
+    font-size: 16px;
+    line-height: 6px;
+    font-weight: 500;
 }
 
-.clients h2{
-    text-decoration: underline;
-    text-decoration-color: #ffc500;
-    text-decoration-thickness: 4px;
+.timeline li span{
+    font-size: 12px;
+    padding: 9px 0;
+}
+
+.timeline li p{
+    font-size: 13px;
+    color: #989898;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+.clients{
+    padding: 40px;
+    background-color: #fafafa;
 }
 
 .showClient{
     display: flex;
     justify-content: space-between;
-    padding: 20px;
 }
 
 .client{
     width: 20%;
     box-shadow: 0px 2px 92px 0px rgba(0, 0, 0, 0.07);
+    padding: 26px 26px;
+    background: #fff;
+    margin-top: 20px;
+    border-radius: 8px;
 }
 
 .client img{
@@ -511,16 +578,10 @@ ul.profile-information li p span{
     padding: 40px;
 }
 
-.testimonials h2{
-    text-decoration: underline;
-    text-decoration-color: #ffc500;
-    text-decoration-thickness: 4px;
-    margin-bottom: 40px;
-}
-
 .showTestimonial{
     display: flex;
     justify-content: space-between;
+    margin-top: 20px;
 }
 
 .testimonial{
@@ -532,7 +593,7 @@ ul.profile-information li p span{
 
 .testInfo{
     display: flex;
-    border-bottom: solid 2px #989898;
+    border-bottom: solid 1px #dfdfdf;
     align-items: center;
     padding-bottom: 20px;
     margin-bottom: 20px;
@@ -540,31 +601,46 @@ ul.profile-information li p span{
 
 .testInfo img{
     border-radius: 50px;
-    width: 50px;
-    height: 50px;
+    width: 46px;
+    min-height: 46px;
     margin-right: 12px;
+    overflow: hidden;
 }
+
+.nameTest{
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.positionTest{
+    font-size: 12px;
+    color: #d0d0d0;
+    margin-top: 4px;
+}
+
+.testQuote{
+    color: #989898;
+    font-size: 12.5px;
+    line-height: 20px;
+}
+
 
 .portfolioContent{
     display: none;
     padding: 40px;
-}
-
-#portfolio h2{
-    text-decoration: underline;
-    text-decoration-color: #ffc500;
-    text-decoration-thickness: 4px;
-    margin-bottom: 40px;
+    background: #fff;
 }
 
 .list{
     display: flex;
     list-style: none;
-    margin-bottom: 20px;
+    margin: 30px 0;
 }
 
 .list li{
-    margin-right: 20px;
+    font-size: 14px;
+    color: #787878;
+    margin-right: 15px;
     cursor: pointer;
     transition: all ease-in-out 0.3s;
 }
@@ -591,12 +667,13 @@ ul.profile-information li p span{
 }
 
 .infoItem{
-    padding: 20px;
+    padding: 10px;
     line-height: 29px;
 }
 
-.infoItem h4{
+.infoItem span{
     font-size: 14px;
+    color: #000;
 }
 
 .infoItem p{
@@ -627,19 +704,13 @@ ul.profile-information li p span{
 .blogContent{
     display: none;
     padding: 20px;
-}
-
-#blog h2{
-    margin: 20px;
-    text-decoration: underline;
-    text-decoration-color: #ffc500;
-    text-decoration-thickness: 4px;
+    background: #fff;
 }
 
 .listBlog{
     display: flex;
     justify-content: space-between;
-    padding: 20px;
+    margin-top: 20px;
 }
 
 .column{
@@ -662,11 +733,39 @@ ul.profile-information li p span{
 }
 
 .blogDes{
-    padding: 20px;
+    padding: 12px;
+}
+
+.blogDes h2{
+    font-size: 15px;
+    color: #000;
+    line-height: 20px;
+    padding: 2px 0 4px;
+}
+
+.blogDes p{
+    font-size: 13px;
+    padding: 5px 0;
+    color: #989898;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.date{
+    font-size: 11px;
+    color: #505050 !important;
+    font-family: arial;
+}
+
+.category{
+    font-size: 13px;
+    color: #afafaf;
 }
 
 .contactContent{
     display: none;
+    background: #fff;
+    padding: 20px;
 }
 
 .contact{
@@ -679,30 +778,21 @@ ul.profile-information li p span{
     width: 50%;
 }
 
-.contactForm h2,
-.contactInformation h2,
-.contactMap h2{
-    padding: 20px;
-    text-decoration: underline;
-    text-decoration-color: #ffc500;
-    text-decoration-thickness: 4px;
-}
-
 .contactForm input{
     padding: 12px;
     border: 0;
-    border-bottom: solid 2px #989898;
-    margin: 20px;
+    border-bottom: solid 1px #989898;
+    margin: 20px 20px 20px 0;
     width: 40%;
     background: none;
 }
 
 .contactForm textarea{
     padding: 12px;
-    margin: 20px;
+    margin: 20px 20px 20px 0;
     width: 90%;
     border: 0;
-    border-bottom: solid 2px #989898;
+    border-bottom: solid 1px #989898;
     background: none;
 }
 
@@ -714,12 +804,12 @@ ul.profile-information li p span{
 .contactInformation{
     width: 45%;
     margin-left: 20px;
-    line-height: 40px;
 }
 
 .contactInformation ul{
-    margin-left: 20px;
     list-style: none;
+    line-height: 40px;
+    margin-top: 20px;
 }
 
 .contactMap{
@@ -728,7 +818,7 @@ ul.profile-information li p span{
 
 .contactMap iframe{
     width: 100%;
-    padding: 20px;
+    margin-top: 20px;
 }
 
 .active{
@@ -738,6 +828,9 @@ ul.profile-information li p span{
 .activeLink{
     color: #ffc500;
 }
+
+
+
 
 @media (max-width: 900px) {
     .profile-des{
